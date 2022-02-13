@@ -1,11 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import App from "./App";
 
 ReactDOM.render(
-  <ul>
-    <li>one</li>
-    <li>two</li>
-  </ul>,
+  <App/>,
   document.getElementById('root')
 );
