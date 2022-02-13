@@ -14,7 +14,9 @@ function Middle(props) {
     <section>
       <p>This is where {props.name} goes</p>
       <ul style={{ textAlign:"left"}}>
-        {funArray.map((item) => <li>{item}</li>)}
+        {funObjects.map((item) => (
+          <li key={item.id}>{item.item}</li>
+        ))}
       </ul>
     </section>
   );
@@ -34,13 +36,16 @@ const funArray = [
   "trois"
 ];
 
+const funObjects = funArray.map((item, i) => ({id: i, item: item}));
+console.log(funObjects);
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <Top />
-        <Middle name="contents" items={funArray} />
+        <Middle name="contents" items={funObjects} />
         <Bottom year={new Date().getFullYear()} />
       </header>
     </div>
