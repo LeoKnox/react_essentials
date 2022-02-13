@@ -9,29 +9,39 @@ function Top() {
   );
 }
 
-function Middle() {
+function Middle(props) {
   return (
     <section>
-      <p>This is where content goes</p>
+      <p>This is where {props.name} goes</p>
+      <ul style={{ textAlign:"left"}}>
+        {funArray.map((item) => <li>{item}</li>)}
+      </ul>
     </section>
   );
 }
 
-function Bottom() {
+function Bottom(props) {
   return (
     <footer>
-      <p>That's all</p>
+      <p>That's all {props.year}</p>
     </footer>
   );
 }
+
+const funArray = [
+  "one",
+  "ni",
+  "trois"
+];
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <Top />
-        <Middle />
-        <Bottom />
+        <Middle name="contents" items={funArray} />
+        <Bottom year={new Date().getFullYear()} />
       </header>
     </div>
   );
