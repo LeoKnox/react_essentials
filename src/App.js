@@ -8,10 +8,10 @@ function RegularComponent() {
   return <h1>Public Message</h1>
 }
 
-function App(props) {
+function App({secret}) {
   return (
     <>
-      {props.secret ? <SecretComponent /> :
+      {secret ? <SecretComponent /> :
       <RegularComponent />}
     </>
   );
