@@ -1,5 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
+import blob from "./blob.png";
 
 function Top() {
   return (
@@ -18,6 +18,7 @@ function Middle(props) {
           <li key={item.id}>{item.item}</li>
         ))}
       </ul>
+      img src={blob};
     </section>
   );
 }
