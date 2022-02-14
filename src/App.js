@@ -1,18 +1,12 @@
+import React, { useState } from "react";
 import './App.css';
 
-function SecretComponent() {
-  return <h1>Hidden data for secret members</h1>
-}
-
-function RegularComponent() {
-  return <h1>Public Message</h1>
-}
-
-function App({secret}) {
+function App() {
+  const [what] = useState("happy");
+  console.log(what);
   return (
     <>
-      {secret ? <SecretComponent /> :
-      <RegularComponent />}
+      <h1>Hello</h1>
     </>
   );
 }
