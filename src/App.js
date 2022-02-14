@@ -18,7 +18,7 @@ function Middle(props) {
           <li key={item.id}>{item.item}</li>
         ))}
       </ul>
-      img src={blob};
+      <img src={blob} height={200} alt="an image of blob" />
     </section>
   );
 }
