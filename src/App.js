@@ -9,11 +9,12 @@ function RegularComponent() {
 }
 
 function App(props) {
-  if (props.secret) {
-    return <SecretComponent />
-  } else {
-    return <RegularComponent />
-  }
+  return (
+    <>
+      {props.secret ? <SecretComponent /> :
+      <RegularComponent />}
+    </>
+  );
 }
 
 export default App;
