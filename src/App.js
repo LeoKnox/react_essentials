@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './App.css';
 
 function App() {
   const [what, setWhat] = useState("happy");
-  console.log(what);
+
+  useEffect(() => {
+    console.log(`what ${what}`);
+  });
+
   return (
     <>
       <h1>Hello what are you {what}</h1>
