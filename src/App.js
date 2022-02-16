@@ -14,9 +14,9 @@ function App({grade}) {
     //return <div>{JSON.stringify(data)}</div>
     return (
       <div>
-        <h1>{data["kanji"]}</h1>
-        <p>{data.meaning}</p>
-        <p>{data.pronounciation}:{data.reading}</p>
+        <h1>{data[0]["kanji"]}</h1>
+        <p>{data[0].meaning}</p>
+        <p>{data[0].pronounciation}:{data[0].reading}</p>
       </div>
     );
   }
