@@ -1,5 +1,5 @@
 import React from "react";
-import {Link, useLocation} from "react-router-dom";
+import {Link, useLocation, Outlet} from "react-router-dom";
 
 export function Home() {
     return (
@@ -13,10 +13,27 @@ export function Home() {
     );
 }
 
+export function ListKanji() {
+    return (
+        <div>
+            <h2>List of Kanji</h2>
+        </div>
+    );
+}
+
+export function SingleKanji() {
+    return (
+        <div>
+            <h2>Single Kanji</h2>
+        </div>
+    );
+}
+
 export function Study() {
     return (
         <div>
             <h1>[Study Page]</h1>
+            <Outlet />
         </div>
     );
 }
