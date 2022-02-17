@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 
 export function Home() {
     return (
@@ -30,9 +30,11 @@ export function Quiz() {
 }
 
 export function Error404() {
+    let location = useLocation();
+    console.log(location);
     return (
         <div>
-            <h1>This is a 404 error -- Not found!</h1>
+            <h1>This is a 404 error -- {location.pathname} Not found!</h1>
         </div>
     )
 }
