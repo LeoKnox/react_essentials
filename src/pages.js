@@ -1,9 +1,14 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 export function Home() {
     return (
         <div>
             <h1>[Main Page]</h1>
+            <nav>
+                <Link to="Study">Study</Link>
+                <Link to="Quiz">Quiz</Link>
+            </nav>
         </div>
     );
 }
@@ -22,4 +27,12 @@ export function Quiz() {
             <h1>[Quiz Page]</h1>
         </div>
     );
+}
+
+export function Error404() {
+    return (
+        <div>
+            <h1>This is a 404 error -- Not found!</h1>
+        </div>
+    )
 }
